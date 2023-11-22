@@ -1,0 +1,254 @@
+#Dada una palabra w del alfabeto={0, 1}, proporciona su reverso, wR .
+#Referencia: https://www.matesfacil.com/automatas-lenguajes/Maquina-Turing.html
+q_states:
+ q_list: 
+  - 'q0'
+  - 'q1'
+  - 'q2'
+  - 'q3'
+  - 'q4'
+  - 'q5'
+  - 'q6'
+  - 'q7'
+  - 'q8'
+  - 'q9'
+ initial: 'q0'
+ final: 'q9'
+alphabet:
+- '0'
+- '1'
+tape_alphabet:
+- A
+- Z
+- 
+delta:
+- params:
+    initial_state: 'q0'
+    mem_cache_value: 
+    tape_input: '1'
+  output:
+    final_state: 'q0'
+    mem_cache_value: 
+    tape_output: '1'
+    tape_displacement: L
+- params:
+    initial_state: 'q0'
+    mem_cache_value: 
+    tape_input: '0'
+  output:
+    final_state: 'q0'
+    mem_cache_value: 
+    tape_output: '0'
+    tape_displacement: L
+- params:
+    initial_state: 'q0'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q1'
+    mem_cache_value: 
+    tape_output: A
+    tape_displacement: R
+- params:
+    initial_state: 'q1'
+    mem_cache_value: 
+    tape_input: '1'
+  output:
+    final_state: 'q1'
+    mem_cache_value: 
+    tape_output: '1'
+    tape_displacement: R
+- params:
+    initial_state: 'q1'
+    mem_cache_value: 
+    tape_input: '0'
+  output:
+    final_state: 'q1'
+    mem_cache_value: 
+    tape_output: '0'
+    tape_displacement: R
+- params:
+    initial_state: 'q1'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q2'
+    mem_cache_value: 
+    tape_output: Z
+    tape_displacement: L
+- params:
+    initial_state: 'q2'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q2'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: L
+- params:
+    initial_state: 'q2'
+    mem_cache_value: 
+    tape_input: '1'
+  output:
+    final_state: 'q3'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: R
+- params:
+    initial_state: 'q2'
+    mem_cache_value: 
+    tape_input: A
+  output:
+    final_state: 'q8'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: L
+- params:
+    initial_state: 'q2'
+    mem_cache_value: 
+    tape_input: '0'
+  output:
+    final_state: 'q6'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: R
+- params:
+    initial_state: 'q3'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q3'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: R
+- params:
+    initial_state: 'q3'
+    mem_cache_value: 
+    tape_input: Z
+  output:
+    final_state: 'q4'
+    mem_cache_value: 
+    tape_output: Z
+    tape_displacement: R
+- params:
+    initial_state: 'q4'
+    mem_cache_value: 
+    tape_input: '1'
+  output:
+    final_state: 'q4'
+    mem_cache_value: 
+    tape_output: '1'
+    tape_displacement: R
+- params:
+    initial_state: 'q4'
+    mem_cache_value: 
+    tape_input: '0'
+  output:
+    final_state: 'q4'
+    mem_cache_value: 
+    tape_output: '0'
+    tape_displacement: R
+- params:
+    initial_state: 'q4'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q5'
+    mem_cache_value: 
+    tape_output: '1'
+    tape_displacement: L
+- params:
+    initial_state: 'q5'
+    mem_cache_value: 
+    tape_input: '1'
+  output:
+    final_state: 'q5'
+    mem_cache_value: 
+    tape_output: '1'
+    tape_displacement: L
+- params:
+    initial_state: 'q5'
+    mem_cache_value: 
+    tape_input: '0'
+  output:
+    final_state: 'q5'
+    mem_cache_value: 
+    tape_output: '0'
+    tape_displacement: L
+- params:
+    initial_state: 'q5'
+    mem_cache_value: 
+    tape_input: Z
+  output:
+    final_state: 'q2'
+    mem_cache_value: 
+    tape_output: Z
+    tape_displacement: L
+- params:
+    initial_state: 'q6'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q6'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: R
+- params:
+    initial_state: 'q6'
+    mem_cache_value: 
+    tape_input: Z
+  output:
+    final_state: 'q7'
+    mem_cache_value: 
+    tape_output: Z
+    tape_displacement: R
+- params:
+    initial_state: 'q7'
+    mem_cache_value: 
+    tape_input: '1'
+  output:
+    final_state: 'q7'
+    mem_cache_value: 
+    tape_output: '1'
+    tape_displacement: R
+- params:
+    initial_state: 'q7'
+    mem_cache_value: 
+    tape_input: '0'
+  output:
+    final_state: 'q7'
+    mem_cache_value: 
+    tape_output: '0'
+    tape_displacement: R
+- params:
+    initial_state: 'q7'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q5'
+    mem_cache_value: 
+    tape_output: '0'
+    tape_displacement: L
+- params:
+    initial_state: 'q8'
+    mem_cache_value: 
+    tape_input: 
+  output:
+    final_state: 'q8'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: R
+- params:
+    initial_state: 'q8'
+    mem_cache_value: 
+    tape_input: Z
+  output:
+    final_state: 'q9'
+    mem_cache_value: 
+    tape_output: 
+    tape_displacement: R
+simulation_strings:
+- '10010'
+- '111000'
+- '101010'
+- '110011'
